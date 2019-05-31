@@ -10,7 +10,7 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    private var entradaUsuario: EditText? = null
+
     private var boton:Button?=null
     private var texto:TextView?=null
 
@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var entradaUsuario: EditText? = null
 
         boton = findViewById<Button>(R.id.botoncito)
         entradaUsuario = findViewById<EditText>(R.id.editText)
@@ -32,9 +34,12 @@ class MainActivity : AppCompatActivity() {
 
 
                 contadorNuevo +=1
-                texto?.append("usuario!!  boton se ha clickeado $contadorNuevo vez")
+                texto?.append("usuario: ${entradaUsuario.text.toString()}!!  boton se ha clickeado $contadorNuevo vez\n")
 
-                Toast.makeText(this@MainActivity,"se clickeo el boton",Toast.LENGTH_SHORT).show()
+                if(contadorNuevo== 10){
+                    Toast.makeText(this@MainActivity,"se clickeo el boton $contadorNuevo veces",Toast.LENGTH_SHORT).show()
+
+                }
 
 
             }

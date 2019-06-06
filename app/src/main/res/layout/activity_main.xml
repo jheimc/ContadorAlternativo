@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="20dp" android:layout_marginRight="20dp" android:hint="Ingrese El nombre"/>
     <TextView
-            android:text="Desaroolado por: Jheimy Miranda"
+            android:text="Desarrollado por: Jheimy Miranda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"

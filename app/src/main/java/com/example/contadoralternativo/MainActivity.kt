@@ -34,7 +34,13 @@ class MainActivity : AppCompatActivity() {
 
 
                 contadorNuevo +=1
-                texto?.append("usuario: ${entradaUsuario.text.toString()}!!  boton se ha clickeado $contadorNuevo vez\n")
+                if(contadorNuevo== 1){
+                    texto?.append("usuario: ${entradaUsuario.text.toString()}!!  boton se ha clickeado $contadorNuevo vez\n")
+                }else{
+                    texto?.append("usuario: ${entradaUsuario.text.toString()}!!  boton se ha clickeado $contadorNuevo veces\n")
+
+                }
+
 
                 if(contadorNuevo== 10){
                     Toast.makeText(this@MainActivity,"se clickeo el boton $contadorNuevo veces",Toast.LENGTH_SHORT).show()
